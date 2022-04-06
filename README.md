@@ -1,4 +1,4 @@
-# kubernetes-deploy
+# testgcp-kubernetes-deployy
 
 Kubernetes Deployment configuration steps
 Update deployment.yaml file for externIP with the IP of your loadbalancer :- externalIPs:
