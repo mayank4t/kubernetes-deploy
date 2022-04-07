@@ -1,12 +1,11 @@
-# testgcp-kubernetes-deploy
+This is a simple Python-based code to print time. 
+This code is used to test Jenkins with Kubernetes (Service and Deployment)
+Pipeline steps:- Git Clone, build Docker image, Push docker image to Hub, and Deploy to Kubernetes using hub image.
+ Docker File:- Python version 3.7 with flask
 
-Kubernetes Deployment configuration steps
-Update deployment.yaml file for externIP with the IP of your loadbalancer :- externalIPs:
-  - 34.131.22.182
-
-Jenkins file :- credential required for git, Docker and config file for Kubernetes
-Plugins :- kubernetes
-
-download token from master
-
-gcloud compute ssh --zone "asia-south2-a" "master"  --project "kubernetestestmayank" --command "sudo cat /etc/kubernetes/admin.conf" > admin.conf
+Prerequisite:- 
+Update deployment.yaml for external Ip for loadbalancer,
+Jenkins file:- credential required for git, Docker, and Kubernetes 
+Install Plugin for Jenkins:- Kubernetes
+download admin.conf from master using below command, to cloudshell for the Jenkins connection with the K8 :- 
+gcloud compute ssh --zone "asia-south2-a" "master" --project "kubernetestestmayank" --command "sudo cat /etc/kubernetes/admin.conf" > admin.conf
