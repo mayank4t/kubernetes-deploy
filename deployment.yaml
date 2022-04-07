@@ -7,8 +7,8 @@ spec:
     app: flask-test-app
   ports:
   - protocol: "TCP"
-    port: 8080
-    targetPort: 80
+    port: 6000
+    targetPort: 5000
   externalIPs:
   - 34.131.188.202
   type: LoadBalancer
@@ -32,4 +32,4 @@ spec:
         image: mayank4t/pythonflask
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 80
+        - containerPort: 5000
